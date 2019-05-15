@@ -10,7 +10,7 @@ if ( !filename ) {
   throw new Error('Missing or invalid argument');
 }
 
-// flags for fs.open:
+// flags for fs.writeFile:
 // a+ = Opens file for read and append, creates file if not exists
 //      Should not be used for positional writing
 // r+ = Opens file for read and write (possible to specify file position)
@@ -18,11 +18,9 @@ if ( !filename ) {
 // w+ = Opens file for read and write, creates file if not exists
 //      truncates file if exists
 fs.readFile(filename, (err, data) => {
-  
   if (err) { throw err; }
 
-  // Make a random string and convert it to a Buffer
-  // Buffers are what we use to write to a file.
+  // Create random input to add to the file
   let randInsert = (Math.random() * 10000).toString() + '\n';
 
   console.log('=======data before=======\n', data.toString());
