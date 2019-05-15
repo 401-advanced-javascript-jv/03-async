@@ -25,7 +25,7 @@ fs.readFile(filename, (err, data) => {
   // Buffers are what we use to write to a file.
   let randInsert = (Math.random() * 10000).toString() + '\n';
 
-  console.log(data.toString());
+  console.log('=======data before=======\n', data.toString());
 
   fs.writeFile(filename, randInsert, {flag: 'a+'}, (err) => {
     if (err) { throw err; }
@@ -33,7 +33,7 @@ fs.readFile(filename, (err, data) => {
     fs.readFile(filename, (err, data) => {
       if (err) { throw err; }
       
-      console.log(data.toString());
+      console.log('=======data after=======\n', data.toString());
 
     });
 
