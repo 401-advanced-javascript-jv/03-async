@@ -1,14 +1,12 @@
-# LAB - 
+# LAB - 03
 
-## Project Name
+## Async Operation
 
-### Author: Student/Group Name
+### Author: Jesse Van Volkinburg
 
 ### Links and Resources
 * [submission PR](http://xyz.com)
 * [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
 
 #### Documentation
 * [api docs](http://xyz.com) (API servers)
