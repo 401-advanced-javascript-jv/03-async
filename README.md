@@ -11,7 +11,7 @@
 ### Modules
 #### `reader.js`
 This module exports a single function.
-* Usage example: `const readAll = require('reader.js');
+* Usage example: `const readAll = require('reader.js')`;
 * `readAll(files, callback)` where `files` is an array of three (3) file paths and `callback(err, data)` is an error-first callback function to run on the contents.
 
 ### Setup
