@@ -5,28 +5,20 @@
 ### Author: Jesse Van Volkinburg
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
-* [travis](http://xyz.com)
-
-#### Documentation
-* [api docs](http://xyz.com) (API servers)
-* [jsdoc](http://xyz.com) (Server assignments)
-* [styleguide](http://xyz.com) (React assignments)
+* [submission PR](https://www.travis-ci.com/401-advanced-javascript-jv/03-async)
+* [travis](https://www.travis-ci.com/401-advanced-javascript-jv/03-async)
 
 ### Modules
 #### `reader.js`
-##### Exported Values and Methods
-
-###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples
+This module exports a single function.
+* Usage example: `const readAll = require('reader.js');
+* `readAll(files, callback)` where `files` is an array of three (3) file paths and `callback(err, data)` is an error-first callback function to run on the contents.
 
 ### Setup
-#### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
+* Clone the repo: `git clone https://github.com/401-advanced-javascript-jv/03-async.git`
+* Enter repo dir: `cd 03-async`
+* Checkout submission branch: `git checkout submission`
+* Run NPM install: `npm install`
 
 #### Running the app
 * `node edit-file.js <filename>`
@@ -35,9 +27,10 @@ Usage Notes or examples
   * This will run the file-reader module on the files `./files/1.txt`, `./files/2.txt`, and `./files/3.txt`.
   
 #### Tests
-* Run with `npm test`
-* What assertions were made?
+Run with `npm test`
+* Assertions
+  * File reader module returns an error when given a bad file
+  * File reader reads 3 files
 * What assertions need to be / should be made?
-
-#### UML
-Link to an image of the UML for your application and response to events
+  * Promises need to be checked
+  * Async/await needs to be checked

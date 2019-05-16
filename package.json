@@ -11,8 +11,10 @@
     "lint": "eslint **/*.js",
     "test": "jest --coverage --verbose",
     "test-watch": "jest --watchAll --coverage --verbose",
-    "moduleOne": "node edit-file.js ./files/test.txt",
-    "module": "node index.js ./files/1.txt ./files/2.txt ./files/3.txt"
+    "edit-file": "node edit-file.js ./files/test.txt",
+    "callback": "node index.js ./files/1.txt ./files/2.txt ./files/3.txt",
+    "promises": "node index-promises.js ./files/1.txt ./files/2.txt ./files/3.txt",
+    "async": "node index-async.js ./files/1.txt ./files/2.txt ./files/3.txt"
   },
   "author": "",
   "license": "ISC",
