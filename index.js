@@ -11,20 +11,25 @@ if (!(files instanceof Array && files.length)) {
   throw new Error('Invalid Args');
 }
 
-// fileReader(files, (err, data) => {
-//   if (err) {
-//     throw err;
-//   }
-//   console.log('From Callback:', data);
-// });
+fileReader(files, (err, data) => {
+  if (err) {
+    throw err;
+  }
+  console.log('From Callback:', data);
+});
 
-// fileReaderPromises(files)
-//   .then((data) => {
-//     console.log('From Promises:', data);
-//   })
-//   .catch((err) => {
-//     throw err;
-//   });
+fileReaderPromises(files)
+  .then((data) => {
+    console.log('From Promises:', data);
+  })
+  .catch((err) => {
+    throw err;
+  });
 
-let data = fileReaderAsync(files);
-console.log('From Async: ', data);
+fileReaderAsync(files)
+  .then((data) => {
+    console.log('From Async:', data);
+  })
+  .catch((err) => {
+    throw err;
+  });
