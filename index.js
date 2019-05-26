@@ -1,16 +1,30 @@
 'use strict';
 
-// const fileReader = require('./lib/reader.js');
-const fileReader = require('./lib/reader-promises.js');
+const fileReader = require('./lib/reader.js');
+const fileReaderPromises = require('./lib/reader-promises.js');
+const fileReaderAsync = require('./lib/reader-async.js');
 
 // Obtain and assert input
 let files = process.argv.slice(2);
 
-if( ! (files instanceof Array && files.length) ) {
+if (!(files instanceof Array && files.length)) {
   throw new Error('Invalid Args');
 }
 
-fileReader(files, (err,data) => {
-  if ( err ) { throw err; }
-  console.log('From Callback:', data);
-});
+// fileReader(files, (err, data) => {
+//   if (err) {
+//     throw err;
+//   }
+//   console.log('From Callback:', data);
+// });
+
+// fileReaderPromises(files)
+//   .then((data) => {
+//     console.log('From Promises:', data);
+//   })
+//   .catch((err) => {
+//     throw err;
+//   });
+
+let data = fileReaderAsync(files);
+console.log('From Async: ', data);

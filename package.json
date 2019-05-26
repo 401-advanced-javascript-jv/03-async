@@ -7,14 +7,11 @@
     "lib": "lib"
   },
   "scripts": {
-    "start": "node index.js",
-    "lint": "eslint **/*.js",
+    "start": "node index.js ./files/1.txt ./files/2.txt ./files/3.txt",
+    "lint": "eslint '**/*.js'",
     "test": "jest --coverage --verbose",
     "test-watch": "jest --watchAll --coverage --verbose",
-    "edit-file": "node edit-file.js ./files/test.txt",
-    "callback": "node index.js ./files/1.txt ./files/2.txt ./files/3.txt",
-    "promises": "node index-promises.js ./files/1.txt ./files/2.txt ./files/3.txt",
-    "async": "node index-async.js ./files/1.txt ./files/2.txt ./files/3.txt"
+    "edit-file": "node edit-file.js ./files/test.txt"
   },
   "author": "",
   "license": "ISC",
