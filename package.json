@@ -7,9 +7,11 @@
     "lib": "lib"
   },
   "scripts": {
-    "lint": "eslint **/.js",
+    "start": "node index.js ./files/1.txt ./files/2.txt ./files/3.txt",
+    "lint": "eslint '**/*.js'",
     "test": "jest --coverage --verbose",
-    "test-watch": "jest --watchAll --coverage --verbose"
+    "test-watch": "jest --watchAll --coverage --verbose",
+    "edit-file": "node edit-file.js ./files/test.txt"
   },
   "author": "",
   "license": "ISC",
