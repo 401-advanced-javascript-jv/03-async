@@ -5,7 +5,7 @@
 ### Author: Jesse Van Volkinburg
 
 ### Links and Resources
-* [submission PR](https://www.travis-ci.com/401-advanced-javascript-jv/03-async)
+* [submission PR](https://github.com/401-advanced-javascript-jv/03-async/pull/1)
 * [travis](https://www.travis-ci.com/401-advanced-javascript-jv/03-async)
 
 ### Modules
